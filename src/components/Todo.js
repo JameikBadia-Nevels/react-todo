@@ -15,7 +15,6 @@ function Todo() {
         nav('/')
     }
 
-// console.log(todo)
     return(
         <div>
             <h1>Todo:</h1>

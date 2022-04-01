@@ -2,6 +2,7 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Todos from './components/Todos'
 import Todo from './components/Todo'
+import Create from './components/Create'
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Todos />}/>
           <Route path='/:id' element={<Todo />}/>
+          <Route path='/' element={<Create />}/>
         </Routes>
       </Router>
     </div>
