@@ -17,9 +17,15 @@ export const deleteTodo = (id) => {
     return response
 }
 
-export const createTodo = () => {
+export const createTodo = (todo) => {
     const URL = `http://localhost:3001/todos`
-    const response = axios.post(URL)
+    const response = axios.post(URL, todo)
+    return response
+}
+
+export const editTodo = (id, updatedTodo) => {
+    const URL = `http://localhost:3001/todos/${id}`
+    const response = axios.put(URL, updatedTodo)
     return response
 }
 

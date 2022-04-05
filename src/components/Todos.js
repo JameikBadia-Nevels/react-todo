@@ -1,5 +1,6 @@
 import {getTodos} from '../services/todos-api'
 import {useState, useEffect} from 'react'
+import Create from './Create'
 export default function Todos() {
  const [todos, setTodos] = useState([])
  useEffect(()=>{
@@ -13,11 +14,12 @@ export default function Todos() {
         {todos.map((todo) => {
             return (
             <li><a href={`/${todo._id}`}>{todo.description}</a>
-            <button>Delete</button></li>
+            </li>
             )
         })}
         
         </ul>
+        <Create />
     </div>
 )
     

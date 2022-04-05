@@ -1,8 +1,9 @@
 import './App.css';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import Todos from './components/Todos'
 import Todo from './components/Todo'
-import Create from './components/Create'
+import Edit from './components/EditTodo';
+// import Create from './components/Create'
 
 function App() {
   
@@ -13,8 +14,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Todos />}/>
           <Route path='/:id' element={<Todo />}/>
-          <Route path='/' element={<Create />}/>
+          <Route path='/:id/edit' element={<Edit />} />
         </Routes>
+        <nav><Link to='/' >Home</Link></nav>
       </Router>
     </div>
   );

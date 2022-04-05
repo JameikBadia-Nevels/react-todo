@@ -19,6 +19,9 @@ function Todo() {
         <div>
             <h1>Todo:</h1>
             <h3>{todo.description}</h3>
+            Completed: <input type='checkbox' checked={todo.complete} />
+            <br/>
+            <button onClick={() => {nav(`/${id}/edit`)}}>Edit</button>
             <button onClick={deleteTheTodo}>Delete</button>
         </div>
     )
